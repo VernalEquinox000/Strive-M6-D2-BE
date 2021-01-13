@@ -48,7 +48,7 @@ articlesRouter.post("/", async (req, res, next) => {
 //PUT articles/:id
 articlesRouter.put("/:id", async (req, res, next) => {
   try {
-    const article = await articleModel.findByIdAndUpdate(req.params.id, req.body, {
+    const article = await ArticleModel.findByIdAndUpdate(req.params.id, req.body, {
       runValidators: true,  //new Parameters
       new: true,
     })

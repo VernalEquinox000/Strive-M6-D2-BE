@@ -19,15 +19,33 @@ const mongoosePaginate = require("mongoose-paginate-v2")
 
 const ArticleSchema = new Schema(
     {
-        headLine: String,
-        subHead: String,
-        content: String,
-        category: String,
+        headLine: {
+            type: String,
+            required: true,
+        },
+        subHead: {
+            type: String,
+            required: true,
+        },
+        content: {
+            type: String,
+            required: true,
+        },
+        category: {
+            type: String,
+            required: true,
+        },
         author: {
-                name: String,
-                img: String
-                },
-        cover: String,
+            name: {
+                type: String,
+            },
+            img: {
+                type: String
+            },
+            cover: {
+                type: String,
+            }
+        }
     }
 )
 
